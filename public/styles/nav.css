@@ -1,0 +1,13 @@
+nav span {
+  width: 100%;
+  background-color: #4056A1;
+  position: fixed;
+  top: 0;
+  height: 120px;
+  color: #FFFFFF;
+  z-index: 7;
+  font-family: 'Bungee';
+  padding: 1em;
+  font-size: 30pt;
+}
+

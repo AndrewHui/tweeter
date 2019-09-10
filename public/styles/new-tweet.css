@@ -1,0 +1,34 @@
+main input {
+  font-family: 'Bungee';
+  position: relative;
+  right: 370px;
+  top: 3px;
+  color: white;
+  background-color: #4056A1;
+}
+
+.new-tweet {
+  text-align: center;
+  margin: 0 auto;
+  border: 500px;
+  margin: 30px;
+  
+}
+
+textarea {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-bottom: 4px solid dimgrey;
+  background: transparent;
+  width: 100%;
+  resize: none;
+  height: 50px;
+  
+}
+
+.counter {
+  position: relative;
+  left: 365px;
+  font-family: 'Bungee';
+  color: dimgray;
+}
