@@ -26,9 +26,19 @@ textarea {
   
 }
 
+
 .counter {
   position: relative;
   left: 365px;
   font-family: 'Bungee';
   color: dimgray;
+}
+
+.counter.over {
+  color: red;
+}
+
+.tweeterB {
+  border: solid black;
+  background-color: green
 }

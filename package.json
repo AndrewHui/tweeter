@@ -14,6 +14,7 @@
     "body-parser": "^1.19.0",
     "chance": "^1.1.0",
     "express": "^4.17.1",
+    "jQuery": "^1.7.4",
     "md5": "^2.2.1"
   },
   "devDependencies": {
