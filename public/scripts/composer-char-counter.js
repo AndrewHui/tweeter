@@ -12,19 +12,20 @@ $(document).ready(function() {
     let words = $(this).val()
     // if (words.length > 140) { 
     // }  
-    const counter = $(this).siblings(".counter");
+    // const counter = $(this).siblings(".counter");
+    const counter = $(this).siblings(".flexNewTweetBottom").children(".counter");
 
     let num = 140 - words.length
-    console.log(num)
+
 
     counter.text(num)
 
     if (num < 0) {
-      counter.addClass("counter over")
+      counter.addClass("over")
     }
-    // else if (num > -1 && counter.find("counter over")) {
-    //   counter.removeClass("counter over") // not working
-    // }
+    else if (num > -1) {
+      counter.removeClass("over") 
+    }
     
   })
 
