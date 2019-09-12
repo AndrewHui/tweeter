@@ -1,5 +1,4 @@
-header {
-  margin-top: 120px;
+header.headerTop {
   height: 400px;
   width: 100%;
   background-color: #e67615;
@@ -7,4 +6,3 @@ header {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   text-align: center;
 }
-

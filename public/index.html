@@ -1,71 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <link rel="stylesheet" href="/styles/tweeter-boxes.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <link rel="stylesheet" href="/styles/tweeter-boxes.css" type="text/css" />
+
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/app.js"></script>
 
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </head>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>Tweeter</span>
-    </nav>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav id="topFlexBox">
+    <span>Tweeter</span>
+    <p>Write a new Tweet</p>
+  </nav>
 
-    <header>
-        <div>
-            <img src="/images/profile-hex.png"> 
+
+  <header class="headerTop">
+    <div>
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2>Sideshow Bob</h2>
+    </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container">
+    <p class="welcomeWords">
+    Welcome to your Tweeter echoing chamber. Please write what you are humming about in the input field below. Feel free
+    to share anything you would like since, no one will hear you.
+    </p>
+
+
+    <section class="new-tweet">
+      <form class="tweetForm" action="/tweets/" method="POST">
+        <textarea class="inputTweetText" name="text" placeholder="What are you tweeting about?"></textarea>
+        <input class="tweetButton" type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
+
+    <section id="tweet-container">
+      <article class="tweets-container">
+        <header class="tweetsBox" >     
+
+          <img class="tweetImage" src="https://i.imgur.com/73hZDYK.png"> </img>
+
+          <p class="nameTweet" name="text">
+            name
+          </p>
+
+
+          <p class="handle">
+            @handle
+          </p>
+
+        </header>
+        <div class='content-area'>
+          <textarea class="contentTweet" name="content">
+                    text
+          </textarea>
         </div>
-        <br>
-        <div>
-            <h2>Sideshow Bob</h2>
-        </div>
-    </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+        <footer class="footerFlex">
+          <div class="daysLeft">
+            created_at
+          </div>
+        </footer>  
+      </article>
+    </section>
 
-Welcome to your Tweeter echoing chamber. Please write what you are humming about in the input field below. Feel free to share anything you would like since, no one will hear you.
-
-        <section class="new-tweet">
-            <form action="/tweets/" method="POST">
-              <textarea name="text" placeholder="What are you tweeting about?"></textarea>
-              <input type="submit" value="Tweet">
-              <span class="counter">140</span>
-            </form>
-          </section>
-
-          <section id="tweet-container">
-
-          </section>
-
-    </main>
+  </main>
 
 
 
-  </body>
+</body>
+
 </html>

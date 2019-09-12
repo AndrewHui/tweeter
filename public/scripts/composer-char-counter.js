@@ -24,7 +24,6 @@ $(document).ready(function() {
     // else if (num > -1 && counter.find("counter over")) {
     //   counter.removeClass("counter over") // not working
     // }
-
     
   })
 

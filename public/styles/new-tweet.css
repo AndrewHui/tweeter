@@ -1,7 +1,9 @@
-main input {
+.welcomeWords {
+  text-align: center;
+}
+
+.tweetButton {
   font-family: 'Bungee';
-  position: relative;
-  right: 370px;
   top: 3px;
   color: white;
   background-color: #4056A1;
@@ -12,10 +14,12 @@ main input {
   margin: 0 auto;
   border: 500px;
   margin: 30px;
+  transition: width 2s;
   
 }
 
-textarea {
+textarea.inputTweetText {
+  position: relative;
   outline: 0;
   border-width: 0 0 2px;
   border-bottom: 4px solid dimgrey;
@@ -28,8 +32,8 @@ textarea {
 
 
 .counter {
-  position: relative;
-  left: 365px;
+  position: absolute;
+  right: 0;
   font-family: 'Bungee';
   color: dimgray;
 }
