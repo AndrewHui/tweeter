@@ -33,6 +33,8 @@ $(document).ready(function(){
 
 const renderTweets = (tweetData) => {
   $('#tweet-container').html("")
+  // $('textarea.inputTweetText').html("")
+  // $('textarea.inputTweetText').reset()
   for (let par of tweetData) {
     const $htmlCode = createTweetElement(par);
     $('#tweet-container').append($htmlCode);
@@ -72,42 +74,54 @@ const createTweetElement = function(tweetObject) {
     ${created_at}
     </div>
   </footer>  
-</article>`
+  </article>`
   
-}
-
-  // renderTweets(tweetData);
+  }
 
   const form = $('.tweetForm');
 
   form.on('submit', (event) => {
-  console.log("STOP")
-  event.preventDefault();
+    event.preventDefault();
 
-  const inputVal = $(form.children("textarea")).val();
+    const inputVal = $(form.children("textarea")).val();
 
-  if (inputVal.length === 0) {
-    alert("YOU abusing my program")
+    if (inputVal.length === 0) {
+      $( ".flexNewTweetBottom p" ).show( "slow" );
+    }
+    else if (inputVal.length > 140) {
+      $( ".flexNewTweetBottom p" ).show( "slow" );
+    }
+
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: form.serialize(),
+      success: loadTweets, 
+    })
+
+    // $('textarea.inputTweetText').reset()
+    
+    })
+
+  const loadTweets = function() {
+    $( ".flexNewTweetBottom p" ).hide();
+    $.ajax("/tweets")
+      .then(renderTweets)
+
   }
-  else if (inputVal.length > 140) {
-    alert("YOU abusing my program")
-  }
 
-  $.ajax({
-    url: "/tweets",
-    type: "POST",
-    data: form.serialize(),
-    success: loadTweets
+  loadTweets();
+
+  const writeANewTweet = $('#birdFlex');
+  
+
+  writeANewTweet.click(() => {
+    $(".tweetForm").slideToggle("slow")
+    
   })
-  })
 
-const loadTweets = function() {
-  $.ajax("/tweets")
-    .then(renderTweets)
 
-}
 
-loadTweets();
 
 });
 

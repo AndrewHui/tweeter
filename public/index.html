@@ -10,6 +10,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300i,700i&display=swap" rel="stylesheet">
 
+  <script src="https://kit.fontawesome.com/4ca328db62.js"></script>
+
+
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -35,7 +38,13 @@
   <!-- Top nav bar (fixed) -->
   <nav id="topFlexBox">
     <span>Tweeter</span>
-    <p>Write a new Tweet</p>
+    <div id="birdFlex">
+    <p id="tweetOption">Write a new Tweet 
+       </p>
+    <i id="kiwiBird" class="fas fa-kiwi-bird"></i>
+
+    </div>
+    
   </nav>
 
 
@@ -60,8 +69,11 @@
     <section class="new-tweet">
       <form class="tweetForm" action="/tweets/" method="POST">
         <textarea class="inputTweetText" name="text" placeholder="What are you tweeting about?"></textarea>
-        <input class="tweetButton" type="submit" value="Tweet">
-        <span class="counter">140</span>
+        <div class="flexNewTweetBottom">
+          <input class="tweetButton" type="submit" value="Tweet">
+          <p> Error: Please stop breaking my precious webpage. I know you are doing it on purpose. </p>
+          <span class="counter">140</span>
+        </div>
       </form>
     </section>
 

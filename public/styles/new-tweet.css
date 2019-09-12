@@ -14,7 +14,6 @@
   margin: 0 auto;
   border: 500px;
   margin: 30px;
-  transition: width 2s;
   
 }
 
@@ -32,7 +31,6 @@ textarea.inputTweetText {
 
 
 .counter {
-  position: absolute;
   right: 0;
   font-family: 'Bungee';
   color: dimgray;
@@ -46,3 +44,16 @@ textarea.inputTweetText {
   border: solid black;
   background-color: green
 }
+
+.flexNewTweetBottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexNewTweetBottom p {
+  color: red;
+  margin: 0;
+  border: solid red;
+  border-width: 1px;
+}
+

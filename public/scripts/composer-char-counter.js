@@ -15,6 +15,7 @@ $(document).ready(function() {
     const counter = $(this).siblings(".counter");
 
     let num = 140 - words.length
+    console.log(num)
 
     counter.text(num)
 
