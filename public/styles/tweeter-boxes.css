@@ -8,8 +8,6 @@
   margin-bottom:40px;
 }
 
-.tweetsBox {
-}
 
 .tweets-container{
   border: solid black;
@@ -40,6 +38,7 @@
 
 .nameTweet {
   margin-right:auto;
+  font-weight: bold;
 
 
   }
@@ -60,6 +59,8 @@
 
 .tweetImage {
   font-size: 0;
+  height: 64px;
+  width; 64px;
   
 
 

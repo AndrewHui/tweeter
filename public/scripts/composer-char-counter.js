@@ -15,6 +15,8 @@ $(document).ready(function() {
     // const counter = $(this).siblings(".counter");
     const counter = $(this).siblings(".flexNewTweetBottom").children(".counter");
 
+    $( ".flexNewTweetBottom p" ).hide();
+
     let num = 140 - words.length
 
 

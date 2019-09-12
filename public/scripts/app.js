@@ -87,6 +87,7 @@ const createTweetElement = function(tweetObject) {
 
     if (inputVal.length === 0) {
       $( ".flexNewTweetBottom p" ).show( "slow" );
+
     }
     else if (inputVal.length > 140) {
       $( ".flexNewTweetBottom p" ).show( "slow" );
@@ -104,7 +105,6 @@ const createTweetElement = function(tweetObject) {
     })
 
   const loadTweets = function() {
-    $( ".flexNewTweetBottom p" ).hide();
     $.ajax("/tweets")
       .then(renderTweets)
 
@@ -120,8 +120,8 @@ const createTweetElement = function(tweetObject) {
     
   })
 
-
-
+  $(".tweetForm").hide()
+  $( ".flexNewTweetBottom p" ).hide();
 
 });
 
