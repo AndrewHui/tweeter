@@ -1,55 +1,25 @@
-$(document).ready(function(){
-// /*
-//  * Client-side JS logic goes here
-//  * jQuery is already loaded
-//  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
-//  */
-
-// // let $ = require('jQuery');
+$(document).ready(function() {
 
 
+  const renderTweets = (tweetData) => {
+    $('#tweet-container').html("");
+    $('.inputTweetText').val("");
+    for (let par of tweetData) {
+      const $htmlCode = createTweetElement(par);
+      $('#tweet-container').append($htmlCode);
+    }
+  };
 
-
-
-// // testObject =  {
-// //   "user": {
-// //     "name": "Newton",
-// //     "avatars": "https://i.imgur.com/73hZDYK.png",
-// //       "handle": "@SirIsaac"
-// //     },
-// //   "content": {
-// //       "text": "If I have seen further it is by standing on the shoulders of giants"
-// //     },
-// //   "created_at": 1461116232227
-// // }
-
-
-// // console.log(createTweetElement(testObject))
-
-
-// Test / driver code (temporary). Eventually will get this from the server.
-
-
-
-const renderTweets = (tweetData) => {
-  $('#tweet-container').html("")
-  $('.inputTweetText').val("")
-  for (let par of tweetData) {
-    const $htmlCode = createTweetElement(par);
-    $('#tweet-container').append($htmlCode);
-  }
-};
-
-const createTweetElement = function(tweetObject) {
+  const createTweetElement = function(tweetObject) {
   //returns a tweet article element containing the entire HTML structure of the tweet
-  console.log(tweetObject.content)
-  const {name, avatars, handle} = tweetObject.user;
-  const {text} = tweetObject.content;
-  let {created_at} = tweetObject;
-  let timeDate = Math.round((Date.now() - created_at) / (1000*60*60*24))
+
+    const {name, avatars, handle} = tweetObject.user;
+    const {text} = tweetObject.content;
+    let {created_at} = tweetObject;
+    let timeDate = Math.round((Date.now() - created_at) / (1000 * 60 * 60 * 24));
   
 
-  return `<article class="tweets-container">
+    return `<article class="tweets-container">
   <header class="tweetsBox" >     
 
     <img class="tweetImage" src=${avatars} </img>
@@ -80,60 +50,59 @@ const createTweetElement = function(tweetObject) {
       <i class="fas fa-thumbs-up"></i>
     </div>
   </footer>  
-  </article>`
+  </article>`;
   
-  }
+  };
 
   const form = $('.tweetForm');
 
-  form.on('submit', (event) => {
+  form.on('submit', (event) => { // on form submit, prevent default function and create errors; otherwise send ajax 
     event.preventDefault();
 
     const inputVal = $(form.children("textarea")).val();
 
     if (inputVal.length === 0) {
-      $( ".flexNewTweetBottom p" ).show( "slow" );
+      $(".flexNewTweetBottom p").show("slow");
 
-    }
-    else if (inputVal.length > 140) {
-      $( ".flexNewTweetBottom p" ).show( "slow" );
+    } else if (inputVal.length > 140) {
+      $(".flexNewTweetBottom p").show("slow");
     }
 
     $.ajax({
       url: "/tweets",
       type: "POST",
       data: form.serialize(),
-      success: loadTweets, 
-    })
+      success: loadTweets,
+    });
 
-    // $('textarea.inputTweetText').reset()
     
-    })
+    
+  });
 
-  const loadTweets = function() {
+  const loadTweets = function() { // Load tweets with a promise
     $.ajax("/tweets")
-      .then(renderTweets)
+      .then(renderTweets);
 
-  }
+  };
 
   loadTweets();
 
   const writeANewTweet = $('#birdFlex');
   
 
-  writeANewTweet.click(() => {
-    $(".tweetForm").slideToggle("slow")
+  writeANewTweet.click(() => { // on click the button for writing a tweet appears
+    $(".tweetForm").slideToggle("slow");
     
-  })
+  });
 
-  $(".tweetForm").hide()
-  $( ".flexNewTweetBottom p" ).hide();
+  $(".tweetForm").hide();
+  $(".flexNewTweetBottom p").hide();
 
 });
 
 
 
 // Test / driver code (temporary)
- // to see what it looks like
- // to add it to the page so we can make sure it's got all 
+// to see what it looks like
+// to add it to the page so we can make sure it's got all
 
