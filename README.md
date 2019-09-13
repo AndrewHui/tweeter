@@ -20,8 +20,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["Screenshot of the registration page"](https://github.com/AndrewHui/w3/blob/master/tinyapp/Docs/RegistrationPage.png)
-!["Screenshot of the URL home page"](https://github.com/AndrewHui/w3/blob/master/tinyapp/Docs/URLhomepage.png)
+!["Screenshot of the registration page"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/home%20page%20desktop%20view.png)
+!["Screenshot of the URL home page"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/Mobile%20View.png)
+!["Screenshot of the registration page"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/error%20message.png)
+!["Screenshot of the URL home page"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/Tweet%20Images.png)
+
 
 #Navigation Desktop
 
