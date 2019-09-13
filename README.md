@@ -20,20 +20,40 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
+###Desktop view of the Tweeter web page
 !["Desktop view of the Tweeter web page"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/home%20page%20desktop%20view.png)
-Desktop view of the Tweeter web page
+
+
+
+
+
+
 
 
 !["Mobile view of the Tweeter web page"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/Mobile%20View.png)
 Mobile view of the Tweeter web page
 
 
+
+
+
+
+
 !["error message"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/error%20message.png)
 This is the error message you will receive if you are trying to submit a tweet with 0 characters.
 
 
+
+
+
+
 !["layout of the tweet"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/Tweet%20Images.png)
 This is what the layout of the tweet looks like
+
+
+
+
+
 
 
 #Navigation Desktop
