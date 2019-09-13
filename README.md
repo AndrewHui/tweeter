@@ -18,6 +18,11 @@ This repository is the starter code for the project: Students will fork and clon
 - Body Parser
 - jQuery
 
+## Final Product
+
+!["Screenshot of the registration page"](https://github.com/AndrewHui/w3/blob/master/tinyapp/Docs/RegistrationPage.png)
+!["Screenshot of the URL home page"](https://github.com/AndrewHui/w3/blob/master/tinyapp/Docs/URLhomepage.png)
+
 #Navigation Desktop
 
 1. Start the server & go to local server page
@@ -36,3 +41,9 @@ This repository is the starter code for the project: Students will fork and clon
 5. Click submit of the Tweet
 6. Tweet button will leverage jQuery Ajax to update the bottom of the page with a new tweet according to username, how many days ago, handle, avatar, and text message
 
+
+
+
+
+
+Please report any additional issues to AndrewHui@github
