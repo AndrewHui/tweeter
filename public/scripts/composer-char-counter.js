@@ -19,7 +19,6 @@ $(document).ready(function() {
 
     let num = 140 - words.length
 
-
     counter.text(num)
 
     if (num < 0) {

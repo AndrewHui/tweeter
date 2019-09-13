@@ -82,6 +82,16 @@ nav p {
     border: solid #f4f1ec 2em;
     border-left: solid #f4f1ec 7em;
     border-right: solid #f4f1ec 7em;
-
   }
+
+  main.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 1.5em;
+  }
+
+
+
+
 }

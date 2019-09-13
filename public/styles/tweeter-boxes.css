@@ -29,17 +29,20 @@
 
 .contentTweet {
   resize: none;
-  border-bottom: 4px solid black;
+  border-bottom: 3px solid black;
   background: transparent;
-  width: 98%;
+  width: 97%;
   border-width: 0 0 3px;
-  height: 60px;
+  word-break: break-word;
+  overflow: hidden;
+  text-align: start;
+  margin-left: 6px;
+
 }
 
 .nameTweet {
   margin-right:auto;
   font-weight: bold;
-
 
   }
 
@@ -47,8 +50,9 @@
 
 .footerFlex {
   display: flex;
-  justify-content: flex-start;
-  padding: 10px;
+  justify-content: space-between;
+  margin: 1em;
+
 
 }
 

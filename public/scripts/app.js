@@ -34,10 +34,10 @@ $(document).ready(function(){
 const renderTweets = (tweetData) => {
   $('#tweet-container').html("")
   // $('textarea.inputTweetText').html("")
-  // $('textarea.inputTweetText').reset()
+  //  $('.inputTweetText':reset)
   for (let par of tweetData) {
     const $htmlCode = createTweetElement(par);
-    $('#tweet-container').append($htmlCode);
+    $('#tweet-container').prepend($htmlCode);
   }
 };
 
@@ -46,7 +46,9 @@ const createTweetElement = function(tweetObject) {
   console.log(tweetObject.content)
   const {name, avatars, handle} = tweetObject.user;
   const {text} = tweetObject.content;
-  const {created_at} = tweetObject;
+  let {created_at} = tweetObject;
+  let timeDate = Math.round((Date.now() - created_at) / (1000*60*60*24))
+  
 
   return `<article class="tweets-container">
   <header class="tweetsBox" >     
@@ -64,14 +66,19 @@ const createTweetElement = function(tweetObject) {
 
   </header>
   <div class='content-area'>
-    <textarea class="contentTweet" name="content">
+    <p class="contentTweet" name="content">
     ${text}
-    </textarea>
+    </p>
   </div>
 
   <footer class="footerFlex">
     <div class="daysLeft">
-    ${created_at}
+    ${timeDate} days ago
+    </div>
+    <div class="flexPic">
+      <i class="fas fa-flag"></i>
+      <i class="fas fa-retweet"></i>
+      <i class="fas fa-thumbs-up"></i>
     </div>
   </footer>  
   </article>`
