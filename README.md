@@ -15,3 +15,24 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- jQuery
+
+#Navigation Desktop
+
+1. Start the server & go to local server page
+2. Find icon in top right to see "Write a new tweet"
+3. Click on top right words and icon for a toggle slide of the new tweet functionality
+4. Enter text of what you want to say that is greater than 0 letters and less than 140 letters
+5. Click submit of the Tweet
+6. Tweet button will leverage jQuery Ajax to update the bottom right portion of the page with a new tweet according to username, how many days ago, handle, avatar, and text message
+
+#Navigation Mobile (Under 768px)
+
+1. Start the server & go to local server page
+2. Find icon in top right to see "Write a new tweet"
+3. Click on top right words and icon for a toggle slide of the new tweet functionality
+4. Enter text of what you want to say that is greater than 0 letters and less than 140 letters
+5. Click submit of the Tweet
+6. Tweet button will leverage jQuery Ajax to update the bottom of the page with a new tweet according to username, how many days ago, handle, avatar, and text message
+
