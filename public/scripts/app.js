@@ -33,11 +33,10 @@ $(document).ready(function(){
 
 const renderTweets = (tweetData) => {
   $('#tweet-container').html("")
-  // $('textarea.inputTweetText').html("")
-  //  $('.inputTweetText':reset)
+  $('.inputTweetText').val("")
   for (let par of tweetData) {
     const $htmlCode = createTweetElement(par);
-    $('#tweet-container').prepend($htmlCode);
+    $('#tweet-container').append($htmlCode);
   }
 };
 
