@@ -20,11 +20,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-###Desktop view of the Tweeter web page
 !["Desktop view of the Tweeter web page"](https://github.com/AndrewHui/tweeter/blob/master/SS%20Readme/home%20page%20desktop%20view.png)
 
 
-
+Desktop view of the Tweeter web page
 
 
 
