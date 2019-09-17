@@ -70,12 +70,12 @@ $(document).ready(function() {
     }
     else {
 
-    $.ajax({
-      url: "/tweets",
-      type: "POST",
-      data: form.serialize(),
-      success: loadTweets,
-    });
+      $.ajax({
+        url: "/tweets",
+        type: "POST",
+        data: form.serialize(),
+        success: loadTweets,
+      });
 
   }
     
