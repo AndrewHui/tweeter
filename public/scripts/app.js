@@ -66,7 +66,9 @@ $(document).ready(function() {
 
     } else if (inputVal.length > 140) {
       $(".flexNewTweetBottom p").show("slow");
+    
     }
+    else {
 
     $.ajax({
       url: "/tweets",
@@ -75,7 +77,7 @@ $(document).ready(function() {
       success: loadTweets,
     });
 
-    
+  }
     
   });
 
